@@ -12,10 +12,19 @@ function App() {
   );
 }
 function MyComponent() {
+  const myStyle = {
+    backgroundColor: 'lightblue',
+    border: '3px solid blue',
+    margin: '20px',
+    padding:'10px',
+    borderRadius: '10px'
+
+
+  }
   return (
-    <div>
+    <div style={myStyle}>
       <h1>Hi There This Is Arafat Bappy</h1>
-      <p>Here is my component</p>
+      <p style={{color:'purple', fontWeight: 'bold'}}>Here is my component</p>
     </div>
   )
 }
