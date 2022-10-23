@@ -22,12 +22,16 @@ function MyComponent(props) {
 
 
   }
+
+  const handleAddPoints = () =>{
+    console.log('clicked');
+  }
   return (
     <div style={myStyle}>
       <h1>Hi There This Is {props.name}. i like {props.brand}</h1>
       <h4>Asking Money {props.price}</h4>
       <p style={{ color: 'purple', fontWeight: 'bold' }}>Here is my component</p>
-      <button>Add Points</button>
+      <button onClick={handleAddPoints}>Add Points</button>
     </div>
   )
 }
