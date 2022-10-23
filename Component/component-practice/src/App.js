@@ -12,7 +12,8 @@ function App() {
   );
 }
 function MyComponent(props) {
-  console.log(props);
+  const [points, setPoints] = useState(1);
+
   const myStyle = {
     backgroundColor: 'lightblue',
     border: '3px solid blue',
@@ -23,13 +24,14 @@ function MyComponent(props) {
 
   }
 
-  const handleAddPoints = () =>{
-    console.log('clicked');
+  const handleAddPoints = () => {
+    const newPoints = points * 2;
+    setPoints(newPoints);
   }
   return (
     <div style={myStyle}>
       <h1>Hi There This Is {props.name}. i like {props.brand}</h1>
-      <h4>Asking Money {props.price}</h4>
+      <h4>Asking Money price: {props.price}, I have points:{points}</h4>
       <p style={{ color: 'purple', fontWeight: 'bold' }}>Here is my component</p>
       <button onClick={handleAddPoints}>Add Points</button>
     </div>
