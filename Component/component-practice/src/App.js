@@ -12,7 +12,7 @@ function App() {
   );
 }
 function MyComponent(props) {
-const [points, setPoints] = useState(1);
+  const [points, setPoints] = useState(1);
 
   const myStyle = {
     backgroundColor: 'lightblue',
