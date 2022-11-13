@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
 
@@ -11,9 +12,11 @@ function App() {
 }
 
 function Counter(){
+  const [count, setCount] = useState(0);
+  console.log(count, setCount);
   return(
     <div className='count'>
-      <h1>Count: </h1>
+      <h1>Count: 0 </h1>
       <button>Increase</button>
     </div>
   )
