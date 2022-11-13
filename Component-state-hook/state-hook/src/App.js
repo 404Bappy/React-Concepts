@@ -13,11 +13,14 @@ function App() {
 
 function Counter(){
   const [count, setCount] = useState(0);
-  console.log(count, setCount);
+ const handleIncrase = () => {
+   const newCount = count + 1;
+   setCount(newCount);
+  };
   return(
     <div className='count'>
-      <h1>Count: 0 </h1>
-      <button>Increase</button>
+      <h1>Count: {count} </h1>
+      <button onClick={handleIncrase}>Increase</button>
     </div>
   )
 }
