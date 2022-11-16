@@ -7,9 +7,22 @@ function App() {
   return (
     <div className="App">
        <Counter></Counter>
+       <ExternalUsers></ExternalUsers>
     </div>
   );
 }
+function ExternalUsers() {
+  return(
+    <div>
+      <h3>External users</h3>
+    </div>
+  )
+}
+
+
+
+
+
 
 function Counter(){
   const [count, setCount] = useState(0);
