@@ -12,6 +12,7 @@ function App() {
   );
 }
 function ExternalUsers() {
+  const [users, setUsers] = useState([]);
   return(
     <div>
       <h3>External users</h3>
