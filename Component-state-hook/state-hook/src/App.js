@@ -1,18 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
   return (
     <div className="App">
-       <Counter></Counter>
+       {/* <Counter></Counter> */}
        <ExternalUsers></ExternalUsers>
     </div>
   );
 }
 function ExternalUsers() {
   const [users, setUsers] = useState([]);
+  useEffect(() =>{
+    console.log('inside use Effect');
+  }, [])
   return(
     <div>
       <h3>External users</h3>
