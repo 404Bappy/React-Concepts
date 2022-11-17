@@ -6,19 +6,19 @@ function App() {
 
   return (
     <div className="App">
-       {/* <Counter></Counter> */}
-       <ExternalUsers></ExternalUsers>
+      {/* <Counter></Counter> */}
+      <ExternalUsers></ExternalUsers>
     </div>
   );
 }
 function ExternalUsers() {
   const [users, setUsers] = useState([]);
-  useEffect(() =>{
+  useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(data => setUsers(data))
+      .then(res => res.json())
+      .then(data => setUsers(data))
   }, [])
-  return(
+  return (
     <div>
       <h3>External users</h3>
       {
@@ -28,7 +28,7 @@ function ExternalUsers() {
   )
 }
 
-function user(){
+function user() {
   return (
     <div>
       <h2>name: {props.name}</h2>
@@ -42,11 +42,11 @@ function user(){
 
 
 
-function Counter(){
+function Counter() {
   const [count, setCount] = useState(0);
- const handleIncrase = () =>  setCount(count + 1);
- const handleDecrase = () =>  setCount(count - 1);
-  return(
+  const handleIncrase = () => setCount(count + 1);
+  const handleDecrase = () => setCount(count - 1);
+  return (
     <div className='count'>
       <h1>Count: {count} </h1>
       <button onClick={handleIncrase}>Increase</button>
@@ -56,8 +56,8 @@ function Counter(){
 }
 
 
-function Product(props){
-  return(
+function Product(props) {
+  return (
     <div className='product'>
       <h2>Name: {props.name}</h2>
       <h4>Price: {props.price}</h4>
