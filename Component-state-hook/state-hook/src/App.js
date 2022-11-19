@@ -22,13 +22,13 @@ function ExternalUsers() {
     <div>
       <h3>External users</h3>
       {
-        users.map(user => <user name={user.name}>{user.name}</user>)
+        users.map(user => <user name={user.name}></user>)
       }
     </div>
   )
 }
 
-function user() {
+function user(props) {
   return (
     <div>
       <h2>name: {props.name}</h2>
