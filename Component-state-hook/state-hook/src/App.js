@@ -22,15 +22,15 @@ function ExternalUsers() {
     <div>
       <h3>External users</h3>
       {
-        users.map(user => <user name={user.name}></user>)
+        users.map(user => <User name={user.name}></User>)
       }
     </div>
   )
 }
 
-function user(props) {
+function User(props) {
   return (
-    <div>
+    <div className='product'>
       <h2>name: {props.name}</h2>
       <p>name: {props.email}</p>
     </div>
