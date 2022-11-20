@@ -49,3 +49,9 @@
   color:rgb(249, 3, 130);
   font-size: 25px;
 }
+
+.Btn{
+  color: brown;
+  background-color: red;
+  border-radius: 20px;
+}

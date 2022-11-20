@@ -21,7 +21,10 @@ function MyComponent(props) {
   return (
     <div className="myCompo">
       <h1>Hey There ! This is : {props.Brand}</h1>
+
+      <button className='Btn'> Add Credit </button>
       <p className="paragraph">Price: {props.Price}</p>
+      
     </div>
   )
 }
