@@ -1,10 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   return (
     <div className="App">
+      <LoadUsers></LoadUsers>
+      
+      
+      
+      
       <MyComponent Brand='SuZuki' Price="265k"></MyComponent>
       <MyComponent Brand='YeamaHA' Price="365k"></MyComponent>
       <MyComponent Brand='Honda' Price="465k"></MyComponent>
@@ -16,20 +21,35 @@ function App() {
     </div>
   );
 }
+function LoadUsers(){
+  const[users, setUsers] = useState([]);
+  useEffect( ()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => console.log(data))
+  }, [])
+  return(
+    <div>
+      <h1>Users Loaded</h1>
+    </div>
+  )
+}
+
+
 
 function MyComponent(props) {
   const [points, setPoints] = useState(1);
   const AddPoints = () => {
-  const newPoints = points * 2;
-  setPoints(newPoints);
-}
+    const newPoints = points * 2;
+    setPoints(newPoints);
+  }
   return (
     <div className="myCompo">
       <h1>Hey There ! This is : {props.Brand}</h1>
 
       <button className='Btn' onClick={AddPoints}> Add Credit </button>
       <p className="paragraph">Price: {props.Price} , <span className='spn'>I have Points :{points} </span> </p>
-      
+
     </div>
   )
 }
