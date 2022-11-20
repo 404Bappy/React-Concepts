@@ -20,7 +20,8 @@ function App() {
 function MyComponent(props) {
   const [points, setPoints] = useState(1);
   const AddPoints = () => {
-  
+  const newPoints = points * 2;
+  setPoints(newPoints);
 }
   return (
     <div className="myCompo">
