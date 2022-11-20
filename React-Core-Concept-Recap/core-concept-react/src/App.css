@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.myCompo{
+  background: darksalmon;
+  border: 5px solid green;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
