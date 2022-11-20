@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="App">
       <LoadUsers></LoadUsers>
-      
-      
-      
-      
+
+
+
+
       <MyComponent Brand='SuZuki' Price="265k"></MyComponent>
       <MyComponent Brand='YeamaHA' Price="365k"></MyComponent>
       <MyComponent Brand='Honda' Price="465k"></MyComponent>
@@ -21,25 +21,25 @@ function App() {
     </div>
   );
 }
-function LoadUsers(){
-  const[users, setUsers] = useState([]);
-  useEffect( ()=>{
+function LoadUsers() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(data => setUsers(data))
+      .then(res => res.json())
+      .then(data => setUsers(data))
   }, [])
-  return(
+  return (
     <div>
       <h1>Users Loaded : {users.length}</h1>
       {
-        users.map(user => <User name = {user.name} phone = {user.phone}></User>)
+        users.map(user => <User name={user.name} phone={user.phone}></User>)
       }
     </div>
   )
 }
 
-function User(props){
-  return(
+function User(props) {
+  return (
     <div className='user'>
       <h2>Name: {props.name}</h2>
       <p>Call me Baby!! {props.phone}</p>
