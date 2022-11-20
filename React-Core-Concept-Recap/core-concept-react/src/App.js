@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
   return (
@@ -17,13 +18,16 @@ function App() {
 }
 
 function MyComponent(props) {
-  console.log(props);
+  const [points, setPoints] = useState(1);
+  const AddPoints = () => {
+  
+}
   return (
     <div className="myCompo">
       <h1>Hey There ! This is : {props.Brand}</h1>
 
-      <button className='Btn'> Add Credit </button>
-      <p className="paragraph">Price: {props.Price}</p>
+      <button className='Btn' onClick={AddPoints}> Add Credit </button>
+      <p className="paragraph">Price: {props.Price} , <span className='spn'>I have Points :{points} </span> </p>
       
     </div>
   )

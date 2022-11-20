@@ -51,7 +51,12 @@
 }
 
 .Btn{
-  color: brown;
-  background-color: red;
-  border-radius: 20px;
+  
+  background-color: rgb(206, 234, 20);
+  border-radius: 10px;
+}
+
+.spn{
+  color: blueviolet;
+  font-weight: 500;
 }
