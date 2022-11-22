@@ -10,13 +10,16 @@ function App() {
   );
 }
 //Create Component to load countries//
+
 function Countries() {
   const [countries, setCountries] = useState([]);
+
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
+    fetch('https://restcountries.com/v2/all')
       .then(res => res.json())
       .then(data => setCountries(data));
-  }, [])
+
+  }, []);
   return (
     <div>
       <h2>Traveling Around The World..!!</h2>
@@ -31,7 +34,7 @@ function Countries() {
 function Country(props) {
   return (
     <div>
-      <h2>Name: {props.name}</h2>
+      <h2> Name: {props.name}</h2>
     </div>
   )
 }
