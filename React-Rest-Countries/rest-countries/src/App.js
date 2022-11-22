@@ -1,15 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { useEffect, useState } from "react";
+
 
 function App() {
   return (
     <div className="App">
-      <Countries></Countries>
+      
     </div>
   );
 }
-//Create Component to load countries//
+/*Create Component to load countries//
 
 function Countries() {
   const [countries, setCountries] = useState([]);
@@ -39,6 +39,8 @@ function Country(props) {
     </div>
   )
 }
+
+*/
 
 
 export default App;
